@@ -1,23 +1,25 @@
-/* Reset básico */
+/* Reset e tipografia limpa */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
-    padding-top: 70px; /* Evita que o conteúdo suma sob o header fixo */
+    padding-top: 75px;
+    background-color: #fcfaf7; /* Fundo off-white natural */
 }
 
-/* Estilo do Header */
+/* Header Sustentável */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
-    background-color: #1a1a1a;
+    height: 75px;
+    background-color: #1e3f20; /* Verde Floresta Fechado */
+    border-bottom: 3px solid #d4a373; /* Linha tom de terra */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,38 +30,55 @@ body {
 .logo {
     color: #ffffff;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
 }
 
-/* Menu de Navegação (Desktop) */
+/* Links de Navegação */
 .nav-menu ul {
     display: flex;
+    align-items: center;
     list-style: none;
 }
 
 .nav-menu li {
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .nav-menu a {
-    color: #dddddd;
+    color: #e8f5e9;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #00adb5;
+    color: #a3e635; /* Verde broto brilhante no hover */
 }
 
-/* Botão do Menu Hambúrguer (Escondido no Desktop) */
+/* Botão Destacado (Fale Conosco) */
+.nav-menu .btn-contato {
+    background-color: #d4a373; /* Tom terra */
+    color: #1e3f20;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.nav-menu .btn-contato:hover {
+    background-color: #e6b88a;
+    color: #1e3f20;
+}
+
+/* Menu Hambúrguer */
 .menu-toggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
-    height: 21px;
+    width: 28px;
+    height: 20px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -69,11 +88,11 @@ body {
     height: 3px;
     width: 100%;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 2px;
     transition: all 0.3s ease;
 }
 
-/* Responsividade (Mobile) */
+/* Telas Mobile (Celulares) */
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -81,36 +100,46 @@ body {
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 75px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #1a1a1a;
-        transition: left 0.3s ease;
+        height: calc(100vh - 75px);
+        background-color: #142a15; /* Verde ainda mais escuro para o menu mobile */
+        transition: left 0.4s cubic-bezier(0.1, 0.7, 0.6, 1);
     }
 
     .nav-menu ul {
         flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
+        padding-top: 40px;
     }
 
     .nav-menu li {
         margin: 20px 0;
+        width: 80%;
+        text-align: center;
     }
 
     .nav-menu a {
-        font-size: 22px;
+        font-size: 20px;
+        display: block;
+        padding: 10px 0;
     }
 
-    /* Classe ativa via JavaScript para abrir o menu */
+    .nav-menu .btn-contato {
+        background-color: #d4a373;
+        color: #1e3f20;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* Menu Ativo */
     .nav-menu.active {
         left: 0;
     }
 
-    /* Animação do botão hambúrguer virando um 'X' */
+    /* Animação X */
     .menu-toggle.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
     }
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
