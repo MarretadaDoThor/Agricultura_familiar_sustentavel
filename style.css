@@ -92,15 +92,14 @@ body {
     transition: all 0.3s ease;
 }
 
-/* NOVO: Seção Inicial com Imagem de Fundo (Hero Section) */
+/* AQUI ENTRA O BLOCO NOVO (Substituindo o antigo .hero) */
 .hero {
-    /* Imagem profissional gratuita do Unsplash sobre agricultura familiar */
     background-image: linear-gradient(rgba(30, 63, 32, 0.6), rgba(20, 42, 21, 0.7)), 
                       url('https://unsplash.com');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: calc(100vh - 75px); /* Ocupa a tela inteira descontando o header */
+    height: calc(100vh - 75px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,7 +122,7 @@ body {
 }
 
 .hero-content p {
-    color: #e8f5e9; /* Tom claro de verde para leitura */
+    color: #e8f5e9;
     font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 35px;
@@ -133,7 +132,7 @@ body {
 /* Botão de Ação da Imagem Inicial */
 .btn-hero {
     display: inline-block;
-    background-color: #d4a373; /* Tom de terra idêntico ao seu padrão */
+    background-color: #d4a373;
     color: #1e3f20;
     padding: 14px 35px;
     font-size: 18px;
@@ -146,10 +145,10 @@ body {
 
 .btn-hero:hover {
     background-color: #e6b88a;
-    transform: translateY(-2px); /* Efeito flutuante leve */
+    transform: translateY(-2px);
 }
 
-/* Efeito de surgimento suave ao carregar a página */
+/* Efeito de surgimento suave */
 @keyframes fadin {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
@@ -167,7 +166,7 @@ body {
         left: -100%;
         width: 100%;
         height: calc(100vh - 75px);
-        background-color: #142a15; /* Verde ainda mais escuro para o menu mobile */
+        background-color: #142a15;
         transition: left 0.4s cubic-bezier(0.1, 0.7, 0.6, 1);
     }
 
@@ -195,12 +194,10 @@ body {
         width: 100%;
     }
 
-    /* Menu Ativo */
     .nav-menu.active {
         left: 0;
     }
 
-    /* Animação X */
     .menu-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -223,3 +220,4 @@ body {
         padding: 12px 28px;
     }
 }
+
