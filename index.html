@@ -3,40 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultura Familiar Sustentável</title>
+    <title>Agricultura Familiar Sustentável - AgroVida</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="header">
-        <!-- Logo com ícone de folha -->
         <a href="#" class="logo">🌱 AgroVida</a>
         
-        <!-- Botão Hambúrguer -->
         <button class="menu-toggle" aria-label="Abrir Menu">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </button>
 
-        <!-- Menu Ecológico -->
         <nav class="nav-menu">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Nossa Terra</a></li>
-                <li><a href="#">Produtos Orgânicos</a></li>
-                <li><a href="#">Cooperativas</a></li>
-                <li><a href="#" class="btn-contato">Fale Conosco</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#produtos">Produtos Orgânicos</a></li>
+                <li><a href="#cooperativas">Cooperativas</a></li>
+                <li><a href="#contato" class="btn-contato">Fale Conosco</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- NOVA SEÇÃO: Início com Imagem de Fundo -->
-    <section class="hero">
+    <!-- Seção Inicial (Hero) -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Cultivando um Futuro Sustentável</h1>
             <p>A agricultura familiar alimenta o mundo e protege a nossa terra.</p>
-            <a href="#" class="btn-hero">Conhecer Projetos</a>
+            <a href="#produtos" class="btn-hero">Conhecer Produtos</a>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: Produtos Orgânicos -->
+    <section id="produtos" class="products-section">
+        <div class="section-title">
+            <h2>Nossos Produtos Orgânicos</h2>
+            <p>Alimentos frescos, cultivados com respeito à natureza e sem agrotóxicos.</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://unsplash.com" alt="Cesta de Legumes Orgânicos">
+                </div>
+                <div class="product-info">
+                    <h3>Cesta de Legumes</h3>
+                    <p>Variedade da estação colhida no dia da entrega por produtores locais.</p>
+                    <span class="product-price">R$ 45,00</span>
+                </div>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://unsplash.com" alt="Frutas da Estação">
+                </div>
+                <div class="product-info">
+                    <h3>Frutas Selecionadas</h3>
+                    <p>Frutas doces e sem defensivos químicos, direto do pomar familiar.</p>
+                    <span class="product-price">R$ 29,90</span>
+                </div>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://unsplash.com" alt="Pães Artesanais">
+                </div>
+                <div class="product-info">
+                    <h3>Pães de Fermentação Natural</h3>
+                    <p>Produzidos com trigo integral orgânico e técnicas tradicionais.</p>
+                    <span class="product-price">R$ 18,00</span>
+                </div>
+            </div>
         </div>
     </section>
 
